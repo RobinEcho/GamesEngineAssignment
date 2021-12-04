@@ -125,4 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 0
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 30

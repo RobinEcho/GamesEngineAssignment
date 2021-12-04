@@ -10,7 +10,6 @@ public class CubeAnimator : MonoBehaviour
     void Start()
     {
         startScale = 1;
-        scaleMultiplier = 10;
     }
 
 
