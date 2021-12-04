@@ -348,7 +348,6 @@ GameObject:
   m_Component:
   - component: {fileID: 467523016}
   - component: {fileID: 467523017}
-  - component: {fileID: 467523018}
   m_Layer: 5
   m_Name: AudioSlider
   m_TagString: Untagged
@@ -428,18 +427,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &467523018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467523015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce03e023c7fc264d98ac0aa87cc1a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &473272239
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.013483422, g: 0.5842092, b: 0.9528302, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -673,6 +660,7 @@ GameObject:
   - component: {fileID: 887065850}
   - component: {fileID: 887065849}
   - component: {fileID: 887065851}
+  - component: {fileID: 887065852}
   m_Layer: 0
   m_Name: AudioPlayer
   m_TagString: Untagged
@@ -690,7 +678,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91f13ade0c263094e9e5475ef2683abb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ce2bc03906657c4eba9e52282e8a48d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -822,6 +810,20 @@ MonoBehaviour:
   - 0
   Amplitude: 0
   AmplitudeBuffer: 0
+--- !u!114 &887065852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887065848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce03e023c7fc264d98ac0aa87cc1a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSlider: {fileID: 467523017}
+  audio: {fileID: 887065849}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
