@@ -49,6 +49,11 @@ public class CameraController : MonoBehaviour
 
             // Use eulerangle to rotate camera, freeze z Axis
             this.transform.eulerAngles = new Vector3(-RotX, this.transform.eulerAngles.y + RotY, 0);
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.visible = true;
         }
 
 
