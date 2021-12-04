@@ -39,6 +39,14 @@ public class AudioCollecter : MonoBehaviour
 
     #endregion
 
+
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 60;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
