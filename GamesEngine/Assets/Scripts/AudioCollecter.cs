@@ -28,7 +28,6 @@ public class AudioCollecter : MonoBehaviour
     float[] freqBandHighest = new float[8];
     public float[] audioBand = new float[8];
     public float[] audioBandBuffer = new float[8];
-    
     #endregion
 
     #region PostProcess of audio
