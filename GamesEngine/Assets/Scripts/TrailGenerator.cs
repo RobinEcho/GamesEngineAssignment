@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class TrailGenerator : MonoBehaviour
 {
+    // Some object we gonna use
     public AudioCollecter AudioData;
+    private TrailRenderer trailRenderer;
+
 
     // Generate point with TrailRenderer as its trails
     public float degree, scale;
+
+    #region IterationTracker
+    // step between each element of point, use iteration to control it
+    public int maxIteration;
+    public int step;
+    private int currentIteration;
+    #endregion
+
+
+    #region LerpSys
+    // use public int to change from unity, private number to assign value
+    public int numberStart;
+    private int number;
+
     private Vector2 ElementPosition;
-    private int count;
-    private TrailRenderer trailRenderer;
 
     // start position and end position the trail will be
     private Vector3 startposition, endposition;
@@ -27,9 +42,13 @@ public class TrailGenerator : MonoBehaviour
 
     // to change our lerpping speed by the band we want
     public int lerpPosBand;
+    #endregion
+
 
     private void Awake()
     {
+        // sign the value from public to private
+        number = numberStart;
         trailRenderer = GetComponent<TrailRenderer>();
         SetLerpPosition();
     }
@@ -37,20 +56,20 @@ public class TrailGenerator : MonoBehaviour
     void SetLerpPosition()
     {
         // calculate the postition of all elements and record its start/end position
-        ElementPosition = CalculateData(degree, scale, count);
+        ElementPosition = CalculateData(degree, scale, number);
         startposition = this.transform.localPosition;
         endposition = new Vector3(ElementPosition.x, ElementPosition.y, 0);
     }
 
-    private Vector2 CalculateData(float degree, float scale, int count)
+    private Vector2 CalculateData(float degree, float scale, int number)
     {
         // to holds more values, use double instead of float
         // calculate where each element will be
 
-        double angle = count * (degree * Mathf.Deg2Rad);
+        double angle = number * (degree * Mathf.Deg2Rad);
 
         // get radius
-        float r = scale * Mathf.Sqrt(count);
+        float r = scale * Mathf.Sqrt(number);
 
         // get x, cast double to float
         float x = r * (float)System.Math.Cos(angle);
@@ -81,6 +100,25 @@ public class TrailGenerator : MonoBehaviour
         {
             lerpPosTimer -= 1;
             SetLerpPosition();
+
+            // iteration change its value
+            number += step;
+            currentIteration++;
         }
+
+        // Normally lerpping, so keep sign new position of arrived element 
+        if(currentIteration > 0 && currentIteration < maxIteration)
+        {
+            SetLerpPosition();
+        }
+        // current iteration has hit 0 or maxiteration, which means this loop have done
+        // resign a new loop to it
+        else
+        {
+            number = numberStart;
+            currentIteration = 0;
+            SetLerpPosition();
+        }
+
     }
 }

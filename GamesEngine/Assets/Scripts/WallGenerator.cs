@@ -52,6 +52,10 @@ public class WallGenerator : MonoBehaviour
     {
         // get TrailRenderer on awake
         trailRenderer = GetComponent<TrailRenderer>();
+        if (canChange)
+        {
+            DegreeControl.value = 65;
+        }
     }
 
     private void Update()
