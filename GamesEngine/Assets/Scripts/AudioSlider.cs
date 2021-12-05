@@ -9,8 +9,6 @@ public class AudioSlider : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public AudioSource audio;
 
 
-    private int currentMin, currentSec, audioMin, audioSec;
-
     public void OnPointerDown(PointerEventData eventData)
     {
         isDragging = true;
