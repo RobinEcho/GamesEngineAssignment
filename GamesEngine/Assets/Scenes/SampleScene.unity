@@ -983,6 +983,8 @@ MonoBehaviour:
   audio: {fileID: 887065851}
   degree: 10
   scale: 1
+  DegreeControl: {fileID: 0}
+  canChange: 0
 --- !u!96 &948421555
 TrailRenderer:
   serializedVersion: 2
@@ -1293,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8396226, g: 0.099012084, b: 0.5214851, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1772,6 +1774,8 @@ MonoBehaviour:
   audio: {fileID: 887065851}
   degree: 122
   scale: 5
+  DegreeControl: {fileID: 1491318901}
+  canChange: 1
 --- !u!96 &2018136549
 TrailRenderer:
   serializedVersion: 2

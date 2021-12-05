@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WallGenerator : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class WallGenerator : MonoBehaviour
 
     public float degree, scale;
 
+    public Slider DegreeControl;
+
+    public bool canChange;
+
     // ElementPostion to sign position of each element 
     private Vector2 ElementPosition;
     private TrailRenderer trailRenderer;
-
     private int count;
 
 
@@ -46,7 +50,6 @@ public class WallGenerator : MonoBehaviour
 
     void Awake()
     {
-
         // get TrailRenderer on awake
         trailRenderer = GetComponent<TrailRenderer>();
     }
@@ -56,5 +59,12 @@ public class WallGenerator : MonoBehaviour
         ElementPosition = CalculateData(degree, scale, count);
         transform.localPosition = new Vector3(ElementPosition.x, ElementPosition.y, 0);
         count ++;
+
+        // use Slider to control degree
+        if(canChange)
+        {
+            degree = DegreeControl.value;
+        }
+        
     }
 }
