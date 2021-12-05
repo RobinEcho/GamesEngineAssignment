@@ -8,26 +8,31 @@ public class AudioSlider : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public Slider audioSlider;
     public AudioSource audio;
 
+    // use pointerDown and Up here to drag audio
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        // while dragging
         isDragging = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        // mouse button up then update audio time to new value, not like before keep update it get only one value when mouse up
         AudioChange();
         isDragging = false;
     }
 
     private void Start()
     {
+        // get audio object when start application
         audio = GetComponent<AudioSource>();
         audioSlider.onValueChanged.AddListener(delegate { AudioChange(); });
     }
 
     private void Update()
     {
+        // update slider value, for further update leave it in showtime()
         ShowTime();
     }
 
