@@ -63,7 +63,9 @@ public class CameraController : MonoBehaviour
         // x and y will not change, only z will change by time, which create the tunnel as expect
         Target.position = new Vector3(Target.position.x, Target.position.y, Target.position.z + (Audio.AmplitudeBuffer * moveSpeed));
 
-            
+        // Set camera always behind tunnel
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, Target.position.z + Distance);
+
 
 
     }
