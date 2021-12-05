@@ -923,6 +923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1083668793}
+  Audio: {fileID: 887065851}
   moveSpeed: 0
   Distance: 0
   mouseSensitivity: 0

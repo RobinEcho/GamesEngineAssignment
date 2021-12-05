@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class WallGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // necessary variables to generate tunnel
+    public AudioCollecter audio;
+    public float degree, scale;
+    private TrailRenderer trailRenderer;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+
+        // get TrailRenderer on awake
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 }

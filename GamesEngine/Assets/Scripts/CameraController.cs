@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     // Object that camera gonna followed.
     public Transform Target;
+    public AudioCollecter Audio;
 
     // Varibales that controls camera move speed, distance between followed object and camera
     public float moveSpeed, Distance,mouseSensitivity;
@@ -57,8 +58,10 @@ public class CameraController : MonoBehaviour
         }
 
 
+        // Change Position of target object base on amplitude of audio, this means higher amplitude we have, the faster object gonna move
 
-
+        // x and y will not change, only z will change by time, which create the tunnel as expect
+        Target.position = new Vector3(Target.position.x, Target.position.y, Target.position.z + (Audio.AmplitudeBuffer * moveSpeed));
 
             
 
