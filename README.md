@@ -22,3 +22,14 @@ Press space to unlock the camera which allows user trun around to view the tunne
 
 Use right side slider to change the style of Tunnel
 
+# List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
+
+| Class/asset | Source |
+|-----------|-----------|
+| AudioCollecter.cs | Self written |
+| AudioSlider.cs | Self written |
+| CameraController.cs | Self written |
+| CubeAnimator.cs | Self written |
+| CubeGenerator.cs | Self written |
+| TrailGenerator.cs | Self written |
+| WallGenerator.cs | From [reference](https://www.youtube.com/watch?v=PwHANpTc87E&t=146s) |
