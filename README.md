@@ -22,7 +22,18 @@ Press space to unlock the camera which allows user trun around to view the tunne
 
 Use right side slider to change the style of Tunnel
 
-# List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
+# How it works
+
+1. Signed audio resource object, collect audio data by unity method GetSpectrumData, signed these data into band array
+
+2. get dynamic array with audio spectrum data from above.
+
+3. To draw tunnel, its actually draw a circule but with trailRenderer component, it allows us to keep the trail when point move to next position. so we get a 2D image
+
+4. Push this surface forward and keep drawing, it looks like 3D tunnel right now.
+
+
+# List of classes/assets in the project
 
 | Class/asset | Source |
 |-----------|-----------|
