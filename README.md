@@ -32,4 +32,7 @@ Use right side slider to change the style of Tunnel
 | CubeAnimator.cs | Self written |
 | CubeGenerator.cs | Self written |
 | TrailGenerator.cs | Self written |
-| WallGenerator.cs | From [reference](https://www.youtube.com/watch?v=PwHANpTc87E&t=146s) |
+| WallGenerator.cs | From [Procedural Phyllotaxis](https://www.youtube.com/watch?v=PwHANpTc87E&t=146s) |
+
+# What I am most proud of in the assignment
+Successfully understand how audio works as data, read out the data and use it to audio visualization. Get good use of that to visualize audio and make audio more beautiful
