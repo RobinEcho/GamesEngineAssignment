@@ -5,18 +5,12 @@ using UnityEngine.UI;
 
 public class WallGenerator : MonoBehaviour
 {
-    // necessary variables to generate tunnel
-    public AudioCollecter audio;
-
     public float degree, scale;
 
     public Slider DegreeControl;
 
-    public bool canChange;
-
     // ElementPostion to sign position of each element 
     private Vector2 ElementPosition;
-    private TrailRenderer trailRenderer;
     private int count;
 
 
@@ -50,12 +44,7 @@ public class WallGenerator : MonoBehaviour
 
     void Awake()
     {
-        // get TrailRenderer on awake
-        trailRenderer = GetComponent<TrailRenderer>();
-        if (canChange)
-        {
-            DegreeControl.value = 122;
-        }
+        DegreeControl.value = 122;
     }
 
     private void Update()
@@ -65,10 +54,7 @@ public class WallGenerator : MonoBehaviour
         count ++;
 
         // use Slider to control degree
-        if(canChange)
-        {
             degree = DegreeControl.value;
-        }
         
     }
 }

@@ -2134,11 +2134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4523db270ffee4d842edbe1949d335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 887065851}
   degree: 122
   scale: 5
   DegreeControl: {fileID: 1491318901}
-  canChange: 1
 --- !u!96 &2018136549
 TrailRenderer:
   serializedVersion: 2

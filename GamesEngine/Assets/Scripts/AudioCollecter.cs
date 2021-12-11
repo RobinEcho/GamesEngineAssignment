@@ -11,7 +11,7 @@ public class AudioCollecter : MonoBehaviour
 
     #region AudioConvert
 
-    // rate that how long it will take. it must be 2^n, min64, nax 8192
+    // rate that how long it will take. it must be 2^n, min64, max 8192
     public static float[] samples = new float[512];
 
     // static in case any change by mistake, stored calculated data into frequencyBand
@@ -117,7 +117,7 @@ public class AudioCollecter : MonoBehaviour
         *  5 - 64 = 2752hz - 2667-5418
         *  6 - 128 = 5504hz - 5419-10922
         *  7 - 256 = 11008hz - 10923-21930
-        *  510
+        * 
         */
 
         int count = 0;
@@ -143,7 +143,6 @@ public class AudioCollecter : MonoBehaviour
             average /= count;
             frequencyBand[i] = average * 10;
         }
-
     }
 
     void CreateAudioBands()

@@ -6,7 +6,6 @@ public class TrailGenerator : MonoBehaviour
 {
     // Some object we gonna use
     public AudioCollecter AudioData;
-    private TrailRenderer trailRenderer;
 
 
     // Generate point with TrailRenderer as its trails
@@ -49,7 +48,6 @@ public class TrailGenerator : MonoBehaviour
     {
         // sign the value from public to private
         number = numberStart;
-        trailRenderer = GetComponent<TrailRenderer>();
         SetLerpPosition();
     }
 
