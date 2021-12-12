@@ -46,4 +46,13 @@ Use right side slider to change the style of Tunnel
 | WallGenerator.cs | From [Procedural Phyllotaxis](https://www.youtube.com/watch?v=PwHANpTc87E&t=146s) |
 
 # What I am most proud of in the assignment
-Successfully understand how audio works as data, read out the data and use it to audio visualization. Get good use of that to visualize audio and make audio more beautiful
+
+* Everything works as expected, all scripts looks clean and easy to understand due to well comment.
+* OO used and followed code design pattern
+* Understand all script and component
+* Visual style consistent
+* Implment 3D visual by samplest way
+
+
+# Demo Link
+[Youtube Link]()
